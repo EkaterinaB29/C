@@ -1,0 +1,33 @@
+#include <stdio.h>
+int main()
+{
+	/* code */
+	int size;
+	printf("Enter the size of the array :\n");
+	scanf("%d", &size );
+
+	//defining the array 
+	int array[size];
+
+	printf("Enter %d integers \n",size );
+	for(int i =0 ;i <size ; i++)
+	{
+		scanf("%d",&array[i]);
+	}
+
+	//using pointers to manimpulate the elemenets 
+
+	int *ptr = array ;//pointer to the  begging of the array 
+	int sum  =0 ;
+	for(int i=0 ;i<size;i++)
+	{
+		sum= sum + *(array+i);
+		printf("%d\n",*(array+i) );  // to print the values of the array
+	}
+	printf("%d \n", sum);  //printing the sum 
+
+
+	//&a[i] = a + i se adresses 
+
+	return 0 ;
+}
